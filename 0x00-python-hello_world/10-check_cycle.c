@@ -19,7 +19,7 @@ int check_cycle(listint_t *list)
 	weak = list->next;
 	quick = list->next->next;
 
-	while (weak && quick && quick quick->next)
+	while (weak && quick && quick && quick->next)
 	{
 		if (weak == quick)
 			return (1);
@@ -28,3 +28,4 @@ int check_cycle(listint_t *list)
 		quick = quick->next->next;
 	}
 	return (0);
+}
