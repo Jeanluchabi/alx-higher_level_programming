@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     from calculator_1 import add, subtract, multiply, divide
-    
+
     a = 10
     b = 5
 
@@ -14,3 +14,4 @@ if __name__ == '__main__':
     print("{} - {} = {}".format(a, b, result_sub))
     print("{} * {} = {}".format(a, b, result_mul))
     print("{} / {} = {}".format(a, b, result_div))
+
