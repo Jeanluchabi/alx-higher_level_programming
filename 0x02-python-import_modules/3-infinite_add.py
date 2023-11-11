@@ -4,8 +4,9 @@ if __name__ == "__main__":
     
     result = 0
 
-    for n in sys.argv:
+    for n in sys.argv[1:]:
         result += int(n)
-        print("{}".fomat(result))
+        
+    print(result)
 
 
