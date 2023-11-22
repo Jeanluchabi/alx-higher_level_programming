@@ -3,12 +3,12 @@
 
 
 class Square:
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializes a new square class
 
         Args:
             size (int): The size of a new square
-            position (int, int): The position of a new square
+            position (tuple): The position of a new square as a tuple (int, int)
         """
         self.size = size
         self.position = position
@@ -42,9 +42,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        """Print the square with a # character"""
         if self.__size == 0:
-            """Print the square with a # character"""
-            if self.__size == 0:
             print()
         else:
             for _ in range(self.__position[1]):
@@ -69,3 +68,4 @@ if __name__ == "__main__":
     my_square.my_print()
 
     print("--")
+
