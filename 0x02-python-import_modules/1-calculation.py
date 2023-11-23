@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
-    from calculator_1 import add, subtract, multiply, divide
+from calculator_1 import add, subtract, multiply, divide
 
+if __name__ == '__main__':
     a = 10
     b = 5
 
-    result_add = add(a, b)
-    result_sub = subtract(a, b)
-    result_mul = multiply(a, b)
-    result_div = divide(a, b)
-
-    print("{} + {} = {}".format(a, b, result_add))
-    print("{} - {} = {}".format(a, b, result_sub))
-    print("{} * {} = {}".format(a, b, result_mul))
-    print("{} / {} = {}".format(a, b, result_div))
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    print("{:d} - {:d} = {:d}".format(a, b, subtract(a, b)))
+    print(":d{} * {:d} = {:d}".format(a, b, multiply(a, b)))
+    print("{:d} / {:d} = {:d}".format(a, b, divide(a, b)))
 
