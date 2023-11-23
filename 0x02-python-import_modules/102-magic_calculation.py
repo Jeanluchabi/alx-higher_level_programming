@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def magic_cslculation(a, b):
-    from magic_calculation_102 import add, sub
+    try:
+        from magic_calculation_102 import add, sub
+    except ImportError:
+        print("Error: Unable to import required functions.")
+        return None
 
     if a < b:
         result = add(a, b)
