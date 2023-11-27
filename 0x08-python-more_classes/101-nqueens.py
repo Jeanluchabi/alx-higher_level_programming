@@ -1,22 +1,20 @@
 #!/usr/bin/python3
 import sys
 
-
-def is_safe(board, row, col):
+def is_safe(board, row, colu):
     """Check if there is a queen in the same column"""
     for x in range(row):
-        if board[x][col] == 1:
+        if board[x][colu] == 1:
             return False
     """Check upper left diagonal"""
-    for x, y in zip(range(row, -1, -1), range(col, -1, -1)):
+    for x, y in zip(range(row, -1, -1), range(colu, -1, -1)):
         if board[x][y] == 1:
             return False
     """Check upper right diagonal"""
-    for x, y in zip(range(row, -1, -1), range(col, len(board))):
+    for x, y in zip(range(row, -1, -1), range(colu, len(board))):
         if board[x][y] == 1:
             return False
     return True
-
 
 def solve_nqueens(board, row):
     a = len(board)
@@ -26,7 +24,7 @@ def solve_nqueens(board, row):
             for y in range(n):
                 if board[x][y] == 1:
                     print("[{}, {}]".format(x, y), end=" ")
-        print()
+        print()  # Add a newline after printing each solution
     else:
         for colu in range(n):
             if is_safe(board, row, colu):
@@ -34,22 +32,22 @@ def solve_nqueens(board, row):
                 solve_nqueens(board, row + 1)
                 board[row][colu] = 0
 
-
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
     try:
-        N = int(sys.argv[1])
+        n = int(sys.argv[1])  # Fix variable name
     except ValueError:
         print("N must be a number")
         sys.exit(1)
-    if N < 4:
+    if n < 4:
         print("N must be at least 4")
         sys.exit(1)
 
     """Initialize the chessboard"""
-    chessboard = [[0 for _ in range(N)] for _ in range(N)]
+    chessboard = [[0 for _ in range(n)] for _ in range(n)]
 
     """Solve the N queens problem"""
     solve_nqueens(chessboard, 0)
+
