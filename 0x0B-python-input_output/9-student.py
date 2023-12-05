@@ -23,7 +23,7 @@ class Student:
 
         for attrib in attributes:
             if not attrib.startswith("__"):
-                value = getattr(self, attr)
+                value = getattr(self, attrib)
                 if isinstance(value, (int, str, bool, list, dict)):
                     json_dict[attrib] = value
 
