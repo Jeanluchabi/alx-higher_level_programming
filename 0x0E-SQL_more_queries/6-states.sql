@@ -1,4 +1,4 @@
--- Script taht creates database and a table with unique,
+-- This is script taht creates database and a table with unique,
 -- not null primary key id.
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;

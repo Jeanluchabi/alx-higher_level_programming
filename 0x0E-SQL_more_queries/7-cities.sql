@@ -1,4 +1,4 @@
--- Script to create database and put in cities table having
+-- This is a script to create database and put in cities table having
 -- a primary key "id" and foreign key from states.
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;

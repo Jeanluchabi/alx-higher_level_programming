@@ -1,4 +1,4 @@
--- Script to create a database and user with select privilege on
+-- This is script to create a database and user with select privilege on
 -- the database created.
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
